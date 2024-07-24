@@ -28,12 +28,18 @@
 1. Installing Python & Node
 	```bash
 	brew install python@3.11 virtualenv node@20; \
-    echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
-    ### softlink brew python in usr/lib/bin
+    echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc;
+    export LDFLAGS="-L/opt/homebrew/opt/node@20/lib"; \
+    export CPPFLAGS="-I/opt/homebrew/opt/node@20/include"; \
+    sudo mkdir -p /usr/local/bin; \
+    sudo ln -s /opt/homebrew/opt/python@3.11/libexec/bin/python3 /usr/local/bin/python; \
+    sudo ln -s /opt/homebrew/opt/python@3.11/libexec/bin/pip3 /usr/local/bin/pip
 	```
-1. Installing terminal & terminal apps
+1. Installing terminal, apps, extensions & fonts
 	```bash
-	brew install neovim docker tmux htop tree yabai skhd ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting
+    brew tap homebrew/cask-fonts
+	brew install neovim docker tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	```
 
 ### Softlink iCloud & dot files
@@ -45,7 +51,7 @@ ln -s ~/.config/gitignore ~/.gitignore; \
 ln -s ~/.config/gitconfig ~/.gitconfig; \
 ln -s ~/.config/tmux.conf ~/.tmux.conf; \
 ln -s ~/.config/wezterm.lua ~/.wezterm.lua; \
-sudo rm -f ~/etc/zshrc; \
+sudo rm -f /etc/zshrc; \
 sudo ln -s ~/.config/zshrc /etc/zshrc; \
 source ~/.zshrc
 ```
