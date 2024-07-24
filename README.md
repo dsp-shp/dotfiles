@@ -79,7 +79,4 @@ skhd --start-service
 
 ### Additionally install App Store apps
 - Amphetamine
-- FCPX
-- Pixelmator
-- Telegram
 - Wipr
