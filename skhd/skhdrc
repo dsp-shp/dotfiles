@@ -1,0 +1,8 @@
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+
+# shift + alt - y: yabay -m space --mirror y-axis
+
+# shift + alt - t: yabai -m window --togle float --grid 4:4:1:1:2:2

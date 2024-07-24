@@ -1,0 +1,7 @@
+**/__pycache__
+
+!**/.gitignore
+
+.CFUserTextEncoding
+.DS_Store
+.Trash
