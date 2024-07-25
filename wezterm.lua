@@ -9,4 +9,6 @@ config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE" 
 
+config.color_scheme = "Catppuccin Macchiato"
+
 return config

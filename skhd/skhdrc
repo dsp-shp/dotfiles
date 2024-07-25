@@ -1,7 +1,7 @@
-alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
+shift + ctrl - left : yabai -m window --focus west
+shift + ctrl - right : yabai -m window --focus east
+shift + ctrl - down : yabai -m window --focus south
+shift + ctrl - up : yabai -m window --focus north
 
 # shift + alt - y: yabay -m space --mirror y-axis
 
