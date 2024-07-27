@@ -4,5 +4,7 @@ shift + ctrl - down : yabai -m window --focus south
 shift + ctrl - up : yabai -m window --focus north
 
 # shift + alt - y: yabay -m space --mirror y-axis
-
 # shift + alt - t: yabai -m window --togle float --grid 4:4:1:1:2:2
+
+shift + ctrl - n: yabai -m space --create
+shift + ctrl - w: yabai -m space --destroy
