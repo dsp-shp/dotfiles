@@ -14,6 +14,8 @@
 - htop
 - yabai
 - skhd
+- borders
+- arc
 - wezterm
 - zsh-autosuggestions
 - zsh-syntax-highlighting
@@ -38,7 +40,8 @@
 1. Installing terminal, apps, extensions & fonts
 	```bash
     brew tap homebrew/cask-fonts
-	brew install neovim docker tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting
+    brew tap FelixKratz/formulae
+	brew install neovim docker tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" borders ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	```
 
@@ -58,7 +61,7 @@ source ~/.zshrc
 
 ### Installing casks
 ```bash
-brew install --cask dbeaver-community telegram transmission upscayl wezterm; \
+brew install --cask arc dbeaver-community telegram transmission upscayl wezterm; \
 ### softlink dbeaver default project to icl/.dbeaver dir
 ```
 
@@ -74,7 +77,8 @@ killall Dock;
 ### Activate yabai & skhd
 ```bash
 yabai --start-service; \
-skhd --start-service
+skhd --start-service; \
+brew services start borders
 ```
 
 ### Additionally install App Store apps

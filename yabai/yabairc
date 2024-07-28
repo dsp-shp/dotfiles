@@ -1,19 +1,52 @@
-yabai -m config layout bsp
-yabai -m config window_placement second_child
+### ...
+sudo yabai --load-sa
 
-yabai -m config top_padding 10
-yabai -m config bottom_padding 10
-yabai -m config left_padding 10
-yabai -m config right_padding 10
-yabai -m config window_gap 10
+yabai -m config window_placement second_child \
+                mouse_follows_focus on \
+                mouse_modifier alt \
+                mouse_action1 move \
+                mouse_action2 resize \
+                mouse_drop_action swap \
+                \ #################### \
+                top_padding 10 \
+                bottom_padding 10 \
+                left_padding 10 \
+                right_padding 10 \
+                window_gap 10 \
 
-yabai -m config mouse_follows_focus on
-yabai -m config mouse_modifier alt
-yabai -m config mouse_action1 move
-yabai -m config mouse_action2 resize
-yabai -m mouse_drop_action swap
-
-yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app=".*" sub-layer=normal
+yabai -m rule --add app="^(Safari|Notes|Reminders|Telegram|System Settings|Photo Booth|App Store|Activity Monitor)$" manage=off
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
-# yabai -m rule --add app="^Telegram$" manage=off
+yabai -m rule --apply
+
+### Autoresize float
+# yabai -m signal --add \
+#     event="window_created" \ 
+#     app="^(Telegram|Notes|Reminders)$" \
+#     action="yabai -m window --resize left:1000:0 && yabai -m window --resize bottom:0:-1000 && yabai -m window --resize top:0:1000 && yabai -m window --resize right:-1000:0"
+
+### Fullscreen specific apps
+yabai -m signal --add \
+    event="window_created" \
+    app="^(Pixelmator Pro|Final Cut Pro|Dbeaver)$" \
+    action="yabai -m window --toggle native-fullscreen $YABAI_WINDOW_ID" \
+    ### Too slow & buggy opening
+    ### action="yabai -m space --create && yabai -m window --space $(expr 1 + $(yabai -m query --spaces | jq 'length')) && yabai -m space --focus $(expr 1 + $(yabai -m query --spaces | jq 'length')) && yabai -m window --toggle zoom-fullscreen"
+
+### Autoremove empty spaces
+# yabai -m singal --add \
+#     event="window_destroyed" \
+#     action="yabai -m space --destroy $(yabai -m query --spaces | jq '.[] | select((.windows | length) <= 1) | .index')"
+
+# yabai -m signal --add \
+#     event="space_changed" \
+#     action="yabai -m space --destroy $(yabai -m query --spaces | jq '.[] | select(.index==$YABAI_SPACE_ID and .windows==[]) | .index')"
+
+# and .[\"windows\"]==[]
+
+yabai -m config layout bsp
+
+borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=6.0 &
 

@@ -1,3 +1,6 @@
+ctrl - 1 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((1+4*($DISPLAY - 1)))
+ctrl - 2 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((2+4*($DISPLAY - 1)))
+
 shift + ctrl - left : yabai -m window --focus west
 shift + ctrl - right : yabai -m window --focus east
 shift + ctrl - down : yabai -m window --focus south
@@ -6,5 +9,5 @@ shift + ctrl - up : yabai -m window --focus north
 # shift + alt - y: yabay -m space --mirror y-axis
 # shift + alt - t: yabai -m window --togle float --grid 4:4:1:1:2:2
 
-shift + ctrl - n: yabai -m space --create
-shift + ctrl - w: yabai -m space --destroy
+ctrl - t: yabai -m space --create
+ctrl - w: yabai -m space --destroy
