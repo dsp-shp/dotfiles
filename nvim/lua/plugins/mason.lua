@@ -23,6 +23,7 @@ return {
         ensure_installed = {
             "pyright",
         },
+        automatic_installation = true,
     })
 
     mason_tool_installer.setup({
@@ -32,6 +33,7 @@ return {
             "isort",
             "black",
             "pylint",
+            "pyright",
             "eslint_d",
         },
     })
