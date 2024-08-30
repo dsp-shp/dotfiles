@@ -25,7 +25,10 @@
 	```bash
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
     echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile; \
-    echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
+    echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc; \
+    echo 'export TERM=\'xterm-256color\'' >> ~/.zshrc; \
+    echo 'export EDITOR=\'nvim\'' >> ~/.zshrc; \
+    echo 'export VISUAL=\'nvim\'' >> ~/.zshrc
 	```
 1. Installing Python & Node
 	```bash
