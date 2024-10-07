@@ -9,8 +9,9 @@ return {
 
         nvimtree.setup({
             view = {
+                side = 'right',
                 width = 35,
-                relativenumber = true,
+                relativenumber = false,
             },
             renderer = {
                 indent_markers = {

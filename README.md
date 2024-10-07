@@ -44,7 +44,7 @@
 	```bash
     brew tap homebrew/cask-fonts
     brew tap FelixKratz/formulae
-	brew install neovim docker tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" borders ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting
+	brew install neovim docker tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" borders ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting ripgrep
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	```
 
