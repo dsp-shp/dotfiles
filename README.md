@@ -15,7 +15,7 @@
 - yabai
 - skhd
 - borders
-- arc
+- min
 - wezterm
 - zsh-autosuggestions
 - zsh-syntax-highlighting
@@ -57,6 +57,9 @@ ln -s ~/.config/gitignore ~/.gitignore; \
 ln -s ~/.config/gitconfig ~/.gitconfig; \
 ln -s ~/.config/tmux.conf ~/.tmux.conf; \
 ln -s ~/.config/wezterm.lua ~/.wezterm.lua; \
+ln -s ~/.config/min/userscripts ~/Library/Application\ Support/Min/userscripts; \
+rm -f ~/Library/Application\ Support/Min/settings.json; \
+ln -s ~/.config/min/settings.json ~/Library/Application\ Support/Min/settings.json; \
 sudo rm -f /etc/zshrc; \
 sudo ln -s ~/.config/zshrc /etc/zshrc; \
 source ~/.zshrc
@@ -64,7 +67,7 @@ source ~/.zshrc
 
 ### Installing casks
 ```bash
-brew install --cask arc dbeaver-community telegram transmission upscayl wezterm; \
+brew install --cask min dbeaver-community telegram transmission upscayl wezterm; \
 ### softlink dbeaver default project to icl/.dbeaver dir
 ```
 
@@ -75,6 +78,11 @@ defaults write com.apple.dock autohide-delay -float 1000; \
 defaults write com.apple.dock no-bouncing -bool TRUE; \
 defaults write com.apple.dock tilesize -int 1; \
 killall Dock;
+```
+
+### Min add permissions
+```bash
+python -c "import os; import sqlite3; con = sqlite3.connect('/Users/%s/Library/Application Support/com.apple.TCC/TCC.db' % os.environ.get('USER')); cur = con.cursor(); cur.execute('''delete from access where client = 'com.electron.min';'''); cur.execute('''insert into access values ('kTCCServiceCamera','com.electron.min', 0, 2, 2, 1, null, null, null, 'UNUSED', null, 0, 1669648527, null, null, 'UNUSED', 0), ('kTCCServiceMicrophone','com.electron.min', 0, 2, 2, 1, null, null, null, 'UNUSED', null, 0, 1669648527, null, null, 'UNUSED', 0);'''); con.close()"
 ```
 
 ### Activate yabai & skhd
