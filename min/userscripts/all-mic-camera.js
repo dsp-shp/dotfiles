@@ -5,4 +5,4 @@
 // ==/UserScript==
 
 navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-navigator.geolocation.getCurrentPosition(true, false);
+// navigator.geolocation.getCurrentPosition(true, false);

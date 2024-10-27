@@ -6,6 +6,7 @@ config.font = wezterm.font("RobotoMono Nerd Font Mono")
 config.font_size = 13
 
 -- Set tab-related
+config.window_close_confirmation = 'AlwaysPrompt'
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE" 
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
