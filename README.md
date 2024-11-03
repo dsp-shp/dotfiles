@@ -24,34 +24,28 @@
     sudo ln -s /opt/homebrew/opt/python@3.11/libexec/bin/python3 /usr/local/bin/python; \
     sudo ln -s /opt/homebrew/opt/python@3.11/libexec/bin/pip3 /usr/local/bin/pip
 	```
-1. Installing terminal, apps, extensions & fonts
+1. Installing terminal, apps, extensions, fonts & casks
 	```bash
     brew tap homebrew/cask-fonts
     brew tap FelixKratz/formulae
 	brew install neovim tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" borders ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting ripgrep
+ 	brew install --cask docker min telegram transmission upscayl wezterm
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	```
 
 ### Softlink iCloud & dot files
 ```bash
-ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs ~/iCloud\ Drive; \
-ln -s ~/iCloud\ Drive/.ssh ~/.ssh; \
-ln -s ~/iCloud\ Drive/.config ~/.config; \
-ln -s ~/.config/gitignore ~/.gitignore; \
-ln -s ~/.config/gitconfig ~/.gitconfig; \
-ln -s ~/.config/tmux.conf ~/.tmux.conf; \
-ln -s ~/.config/wezterm.lua ~/.wezterm.lua; \
-ln -s ~/.config/min/userscripts ~/Library/Application\ Support/Min/userscripts; \
-rm -f ~/Library/Application\ Support/Min/settings.json; \
-ln -s ~/.config/min/settings.json ~/Library/Application\ Support/Min/settings.json; \
-sudo rm -f /etc/zshrc; \
-sudo ln -s ~/.config/zshrc /etc/zshrc; \
+rm -rf ~/iCloud\ Drive || :; ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs ~/iCloud\ Drive; \
+rm -rf ~/Documents/iCloud\ Drive || :; ln -s ~/iCloud\ Drive ~/Documents/iCloud\ Drive; \
+rm -rf ~/.ssh || :; ln -s ~/iCloud\ Drive/.ssh ~/.ssh; \
+rm -rf ~/.config || :; ln -s ~/iCloud\ Drive/.config ~/.config; \
+rm -rf ~/.git* || :; ln -s ~/.config/gitignore ~/.gitignore; ln -s ~/.config/gitconfig ~/.gitconfig; \
+rm -rf ~/.tmux.conf || :; ln -s ~/.config/tmux.conf ~/.tmux.conf; \
+rm -rf ~/.wezterm.lua || :; ln -s ~/.config/wezterm.lua ~/.wezterm.lua; \
+rm -rf ~/Library/Application\ Support/Min/userscripts || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/userscripts ~/Library/Application\ Support/Min/userscripts; \
+rm -rf ~/Library/Application\ Support/Min/settings.json || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/settings.json ~/Library/Application\ Support/Min/settings.json; \
+sudo rm -f /etc/zshrc || :; sudo ln -s ~/.config/zshrc /etc/zshrc; \
 source ~/.zshrc
-```
-
-### Installing casks
-```bash
-brew install --cask docker min telegram transmission upscayl wezterm
 ```
 
 ### Dock settings
@@ -63,7 +57,7 @@ defaults write com.apple.dock tilesize -int 1; \
 killall Dock;
 ```
 
-### Min add permissions
+### Min add permissions (with SIP disabled)
 ```bash
 python -c "import os; import sqlite3; con = sqlite3.connect('/Users/%s/Library/Application Support/com.apple.TCC/TCC.db' % os.environ.get('USER')); cur = con.cursor(); cur.execute('''delete from access where client = 'com.electron.min';'''); cur.execute('''insert into access values ('kTCCServiceCamera','com.electron.min', 0, 2, 2, 1, null, null, null, 'UNUSED', null, 0, 1669648527, null, null, 'UNUSED', 0), ('kTCCServiceMicrophone','com.electron.min', 0, 2, 2, 1, null, null, null, 'UNUSED', null, 0, 1669648527, null, null, 'UNUSED', 0);'''); con.close()"
 ```
