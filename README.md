@@ -54,6 +54,7 @@ defaults write com.apple.dock autohide -bool true; \
 defaults write com.apple.dock autohide-delay -float 1000; \
 defaults write com.apple.dock no-bouncing -bool TRUE; \
 defaults write com.apple.dock tilesize -int 1; \
+defaults write com.apple.dock ResetLaunchPad -bool true; \
 killall Dock;
 ```
 
