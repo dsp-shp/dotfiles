@@ -44,6 +44,7 @@ rm -rf ~/.tmux.conf || :; ln -s ~/.config/tmux.conf ~/.tmux.conf; \
 rm -rf ~/.wezterm.lua || :; ln -s ~/.config/wezterm.lua ~/.wezterm.lua; \
 rm -rf ~/Library/Application\ Support/Min/userscripts || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/userscripts ~/Library/Application\ Support/Min/userscripts; \
 rm -rf ~/Library/Application\ Support/Min/settings.json || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/settings.json ~/Library/Application\ Support/Min/settings.json; \
+rm -rf ~/Library/Application\ Support/com.tinyapp.TablePlus/Data || :; mkdir -p ~/Library/Application\ Support/com.tinyapp.TablePlus/ ; ln -s ~/iCloud\ Drive/.tableplus ~/Library/Application\ Support/com.tinyapp.TablePlus/Data; \
 sudo rm -f /etc/zshrc || :; sudo ln -s ~/.config/zshrc /etc/zshrc; \
 source ~/.zshrc
 ```
