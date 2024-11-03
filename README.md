@@ -2,7 +2,7 @@
 
 |Homebrew Formulae|Homebrew Casks|Additional Apps|
 |-|-|-|
-|python@3.11<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>borders<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Min<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm|Amphetamine<br>Wipr<br>TablePlus|
+|python@3.11<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>borders<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Min<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm|Amphetamine<br>Wipr<br>TablePlus<br>[Endpoint Security](https://support.checkpoint.com/results/download/120374)|
 
 ### Instaling core
 1. Installing Homebrew
