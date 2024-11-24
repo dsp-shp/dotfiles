@@ -14,7 +14,7 @@ return {
         local py_path = nil
         -- decide which python executable to use for mypy
         if venv_path ~= nil then
-            py_path = venv_path .. "/bin/python3"
+            py_path = venv_path .. "/usr/lib/python3.10"
         else
             py_path = vim.g.python3_host_prog
         end
