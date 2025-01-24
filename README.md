@@ -39,14 +39,14 @@
 rm -rf ~/iCloud\ Drive || :; ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs ~/iCloud\ Drive; \
 rm -rf ~/Documents/iCloud\ Drive || :; ln -s ~/iCloud\ Drive ~/Documents/iCloud\ Drive; \
 rm -rf ~/.ssh || :; ln -s ~/iCloud\ Drive/.ssh ~/.ssh; \
-rm -rf ~/.config || :; ln -s ~/iCloud\ Drive/.config ~/.config; \
+rm -rf ~/.config || :; git clone git@github.com/dsp-shp/dotfiles .config; \
 rm -rf ~/.git* || :; ln -s ~/.config/gitignore ~/.gitignore; ln -s ~/.config/gitconfig ~/.gitconfig; \
 rm -rf ~/.tmux.conf || :; ln -s ~/.config/tmux.conf ~/.tmux.conf; \
 rm -rf ~/.wezterm.lua || :; ln -s ~/.config/wezterm.lua ~/.wezterm.lua; \
 rm -rf ~/Library/Application\ Support/Min/userscripts || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/userscripts ~/Library/Application\ Support/Min/userscripts; \
 rm -rf ~/Library/Application\ Support/Min/settings.json || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/settings.json ~/Library/Application\ Support/Min/settings.json; \
 rm -rf ~/Library/Application\ Support/com.tinyapp.TablePlus/Data || :; mkdir -p ~/Library/Application\ Support/com.tinyapp.TablePlus/ ; ln -s ~/iCloud\ Drive/.tableplus ~/Library/Application\ Support/com.tinyapp.TablePlus/Data; \
-sudo rm -f /etc/zshrc || :; sudo ln -s ~/.config/zshrc /etc/zshrc; \
+sudo rm -f ~/.zshrc || :; ln -s ~/.config/zshrc ~/.zshrc; \
 source ~/.zshrc
 ```
 

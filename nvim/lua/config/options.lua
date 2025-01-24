@@ -2,6 +2,7 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
 
+vim.g.isort_vim_options = "--profile black"
 vim.g.neovide_margin_left = 5
 vim.g.neovide_padding_right = 5
 
