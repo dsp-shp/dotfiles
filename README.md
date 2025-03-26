@@ -2,7 +2,7 @@
 
 |Homebrew Formulae|Homebrew Casks|Additional Apps|
 |-|-|-|
-|python@3.11<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>borders<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Min<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm|Amphetamine<br>Wipr<br>TablePlus<br>[Endpoint Security](https://support.checkpoint.com/results/download/120374)|
+|python@3.11<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>borders<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Chromium<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm|Amphetamine<br>Wipr<br>TablePlus<br>[Endpoint Security](https://support.checkpoint.com/results/download/120374)|
 
 ### Instaling core
 1. Installing Homebrew
@@ -29,7 +29,7 @@
     brew tap homebrew/cask-fonts; \
     brew tap FelixKratz/formulae; \
 	brew install neovim tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" borders ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting ripgrep; \
-    brew install --cask docker min telegram transmission upscayl wezterm; \
+    brew install --cask docker eloston-chromium telegram transmission upscayl wezterm; \
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'; \
     pip install "python-lsp-server[all]" python-lsp-isort pylsp-mypy python-lsp-black pylint-venv
 	```
@@ -43,8 +43,6 @@ rm -rf ~/.config || :; git clone git@github.com/dsp-shp/dotfiles .config; \
 rm -rf ~/.git* || :; ln -s ~/.config/gitignore ~/.gitignore; ln -s ~/.config/gitconfig ~/.gitconfig; \
 rm -rf ~/.tmux.conf || :; ln -s ~/.config/tmux.conf ~/.tmux.conf; \
 rm -rf ~/.wezterm.lua || :; ln -s ~/.config/wezterm.lua ~/.wezterm.lua; \
-rm -rf ~/Library/Application\ Support/Min/userscripts || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/userscripts ~/Library/Application\ Support/Min/userscripts; \
-rm -rf ~/Library/Application\ Support/Min/settings.json || :; mkdir -p ~/Library/Application\ Support/Min ; ln -s ~/.config/min/settings.json ~/Library/Application\ Support/Min/settings.json; \
 rm -rf ~/Library/Application\ Support/com.tinyapp.TablePlus/Data || :; mkdir -p ~/Library/Application\ Support/com.tinyapp.TablePlus/ ; ln -s ~/iCloud\ Drive/.tableplus ~/Library/Application\ Support/com.tinyapp.TablePlus/Data; \
 sudo rm -f ~/.zshrc || :; ln -s ~/.config/zshrc ~/.zshrc; \
 source ~/.zshrc
@@ -58,11 +56,6 @@ defaults write com.apple.dock no-bouncing -bool TRUE; \
 defaults write com.apple.dock tilesize -int 1; \
 defaults write com.apple.dock ResetLaunchPad -bool true; \
 killall Dock;
-```
-
-### Min add permissions (with SIP disabled)
-```bash
-python -c "import os; import sqlite3; con = sqlite3.connect('/Users/%s/Library/Application Support/com.apple.TCC/TCC.db' % os.environ.get('USER')); cur = con.cursor(); cur.execute('''delete from access where client = 'com.electron.min';'''); cur.execute('''insert into access values ('kTCCServiceCamera','com.electron.min', 0, 2, 2, 1, null, null, null, 'UNUSED', null, 0, 1669648527, null, null, 'UNUSED', 0), ('kTCCServiceMicrophone','com.electron.min', 0, 2, 2, 1, null, null, null, 'UNUSED', null, 0, 1669648527, null, null, 'UNUSED', 0);'''); con.close()"
 ```
 
 ### Activate yabai & skhd
