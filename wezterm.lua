@@ -23,13 +23,14 @@ if true then
     }
 
     -- Set colors
-    config.color_scheme = "Catppuccin Macchiato"
+    config.color_scheme = "Github"
+    -- config.color_scheme = "Catppuccin Macchiato"
     config.colors = {
         tab_bar = {
-            background = "rgba(0, 0, 0, 0)",
+            background = "#F4F4F4",
             inactive_tab = {
-                fg_color = "#FFFFFF",
-                bg_color = "rgba(0, 0, 0, 0)"
+                fg_color = "#000000",
+                bg_color = "#F4F4F4"
             },
         }
     }
