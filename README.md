@@ -2,7 +2,7 @@
 
 |Homebrew Formulae|Homebrew Casks|Additional Apps|
 |-|-|-|
-|python@3.11<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>borders<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Chromium<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm|Amphetamine<br>Wipr<br>TablePlus<br>[Endpoint Security](https://support.checkpoint.com/results/download/120374)<br>Zed|
+|python@3.11<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Chromium<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm|Amphetamine<br>Wipr<br>TablePlus<br>[Endpoint Security](https://support.checkpoint.com/results/download/120374)<br>Zed<br>Ampero<br>GarageBand<br>OpenVPN<br>Davinci Resolve|
 
 ### Instaling core
 1. Installing Homebrew
@@ -28,7 +28,7 @@
 	```bash
     brew tap homebrew/cask-fonts; \
     brew tap FelixKratz/formulae; \
-	brew install neovim tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" borders ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting ripgrep; \
+	brew install neovim tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" ### ffmpeg qpdf zsh-autosuggestions zsh-syntax-highlighting ripgrep; \
     brew install --cask docker eloston-chromium telegram transmission upscayl wezterm zed; \
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'; \
     pip install "python-lsp-server[all]" python-lsp-isort pylsp-mypy python-lsp-black pylint-venv
@@ -61,8 +61,7 @@ killall Dock;
 ### Activate yabai & skhd
 ```bash
 yabai --start-service; \
-skhd --start-service; \
-brew services start borders
+skhd --start-service
 ```
 
 ### If there are problems with MacOS access rights for yabai & skhd
