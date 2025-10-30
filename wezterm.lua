@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 if true then
     -- Set font
     config.font = wezterm.font("RobotoMono Nerd Font Mono")
-    config.font_size = 14
+    config.font_size = 18
 
     -- Set tab-related
     config.window_close_confirmation = 'AlwaysPrompt'
@@ -23,14 +23,14 @@ if true then
     }
 
     -- Set colors
-    config.color_scheme = "Github"
+    config.color_scheme = "Kanagawa (Gogh)"
     -- config.color_scheme = "Catppuccin Macchiato"
     config.colors = {
         tab_bar = {
-            background = "#F4F4F4",
+            background = "#1F1F29",
             inactive_tab = {
-                fg_color = "#000000",
-                bg_color = "#F4F4F4"
+                fg_color = "#DDD7B7",
+                bg_color = "#1F1F29"
             },
         }
     }

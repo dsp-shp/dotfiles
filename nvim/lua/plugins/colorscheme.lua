@@ -1,9 +1,9 @@
 return {
-    "projekt0n/github-nvim-theme",
-    name = "github-theme",
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
     lazy = false,
     priority = 1000,
     config = function()
-        vim.cmd("colorscheme github_light")
+        vim.cmd("colorscheme kanagawa")
     end
 }

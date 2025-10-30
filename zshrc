@@ -13,3 +13,8 @@ export TERM='xterm-256color'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+
+export PERPLEXITY_API_KEY="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"
+
+# Format alias for git log
+# ...
