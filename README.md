@@ -2,7 +2,7 @@
 
 |Homebrew Formulae|Homebrew Casks|Additional Apps|
 |-|-|-|
-|python@3.12<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Chromium<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm<br>OpenVPN Connect<br>Zed|Amphetamine<br>Wipr<br>TablePlus<br>[Endpoint Security](https://support.checkpoint.com/results/download/120374)<br>Ampero<br>GarageBand<br>OpenVPN<br>Davinci Resolve|
+|python@3.12<br>virtualenv<br>neovim<br>tmux<br>node@20<br>tree<br>qpdf<br>ffmpeg<br>htop<br>yabai<br>skhd<br>zsh-autosuggestions<br>zsh-syntax-highlighting|Docker<br>Chromium<br>Telegram<br>Transmission<br>Upscayl<br>Wezterm<br>OpenVPN Connect<br>Zed|Amphetamine<br>Wipr<br>TablePlus<br>[Endpoint Security](https://support.checkpoint.com/results/download/120374)<br>Ampero<br>GarageBand<br>Davinci Resolve|
 
 ### Instaling core
 1. Installing Homebrew
