@@ -9,4 +9,4 @@
 [core]
     editor = nvim
 [http]
-	sslverify = False
+	sslVerify = false

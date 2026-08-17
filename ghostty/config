@@ -1,0 +1,14 @@
+font-family = "RobotoMono Nerd Font Mono"
+font-size = 18
+bold-is-bright = true
+auto-update = check
+macos-titlebar-style = tabs
+quit-after-last-window-closed = true
+window-padding-x = 10
+window-padding-y = 5
+mouse-hide-while-typing = true
+scrollback-limit = 1000000
+shell-integration = zsh
+window-save-state = always
+theme = GitHub Dark Dimmed
+
