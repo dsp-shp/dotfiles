@@ -18,7 +18,7 @@
         neovim<br>
         node@20<br>
         tree<br>
-        qpdf<br>
+        <!-- qpdf<br> -->
         ffmpeg<br>
         htop<br>
         sevenzip<br>
@@ -26,26 +26,31 @@
         trash
       </td>
       <td>
-        Chromium<br>
+        Chrome<br>
         Docker<br>
         Ghostty<br>
         OBS<br>
         Telegram<br>
         Transmission<br>
         VSCode<br>
-        OnlyOffice
+        OnlyOffice<br>
+        Crisp<br>
+        IINA<br>
+        Windows App
       </td>
       <td>
         Amphetamine<br>
         GarageBand<br>
-        v2RayTun<br>
-        Wipr<br>
-        uBlock Origin Lite
+        Sota Connect<br>
+        <!-- Wipr<br> -->
+        <!-- uBlock Origin Lite -->
       </td>
       <td>
         TablePlus<br>
         <a href="https://support.checkpoint.com/results/download/120374">Endpoint Security</a><br>
-        Davinci Resolve
+        Davinci Resolve<br>
+        Pixelmator Trial<br>
+        Ampero II<br>
       </td>
     </tr>
   </tbody>
@@ -71,10 +76,9 @@
 	```
 1. Installing terminal, apps, extensions, fonts & casks
 	```bash
-    brew tap FelixKratz/formulae; \
-	brew install autossh minikube trash uv anomalyco/tap/opencode sevenzip neovim tmux htop tree koekeishiya/formulae/yabai koekeishiya/formulae/skhd "font-roboto-mono-nerd-font" ffmpeg ### qpdf zsh-autosuggestions zsh-syntax-highlighting ripgrep; \
-    brew install --cask docker eloston-chromium telegram transmission visual-studio-code obs ghostty onlyoffice \
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim';
+	brew install autossh minikube trash uv anomalyco/tap/opencode sevenzip neovim tmux htop tree "font-roboto-mono-nerd-font" ffmpeg ### qpdf zsh-autosuggestions zsh-syntax-highlighting ripgrep; \
+    brew install --cask docker google-chrome telegram transmission visual-studio-code obs ghostty onlyoffice windows-app iina \
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim';
 	```
 
 ### Softlink iCloud & dot files
@@ -87,6 +91,7 @@ rm -rf ~/.git* || :; ln -s ~/.config/gitignore ~/.gitignore; ln -s ~/.config/git
 rm -rf ~/.tmux.conf || :; ln -s ~/.config/tmux.conf ~/.tmux.conf; \
 rm -rf ~/Library/Application\ Support/com.tinyapp.TablePlus/Data || :; mkdir -p ~/Library/Application\ Support/com.tinyapp.TablePlus/ ; ln -s ~/iCloud\ Drive/.tableplus ~/Library/Application\ Support/com.tinyapp.TablePlus/Data; \
 sudo rm -f ~/.zshrc || :; ln -s ~/.config/zshrc ~/.zshrc; \
+rm -rf ~/Library/Application\ Support/Code/User/settings.json || :; ln -s ~/iCloud\ Drive/.vscode/settings.json  ~/Library/Application\ Support/Code/User/settings.json; \
 source ~/.zshrc
 ```
 

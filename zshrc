@@ -28,4 +28,7 @@ setopt SHARE_HISTORY INC_APPEND_HISTORY
 
 # Created by `pipx` on 2026-02-25 15:28:07
 export PATH="$PATH:/Users/dsp_shp/.local/bin"
-alias code="open -a \"Code\""
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/node@20/bin:/usr/local/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Users/dsp_shp/.local/bin
+export TERM='xterm-256color'
+export EDITOR='nvim'
+export VISUAL='nvim'

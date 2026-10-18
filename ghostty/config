@@ -10,5 +10,5 @@ mouse-hide-while-typing = true
 scrollback-limit = 1000000
 shell-integration = zsh
 window-save-state = always
-theme = GitHub Dark Dimmed
+theme = GitHub Dark Dimmed 
 
